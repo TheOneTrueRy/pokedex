@@ -2,6 +2,7 @@
 
 export class Pokemon{
   constructor(data){
+    debugger
     this.id = data.id
     this.name = data.name
     this.img = data.sprites.other['official-artwork'].front_default || data.sprites.front_default
@@ -38,7 +39,7 @@ export class Pokemon{
             </div>
             <div class="col-6 d-flex flex-column">
               <span class="mt-3 fs-5">Weight: ${this.weight}</span>
-              <button onclick="app.sandboxController.catchPokemon('${this.id}')" class="mt-5 myPokeBtn rounded mb-2 py-2 fs-5"><i class="mdi mdi-pokeball fs-5 me-3"></i>Catch</button>
+              <button onclick="app.sandboxController.catchPokemon()" class="mt-5 myPokeBtn rounded mb-2 py-2 fs-5"><i class="mdi mdi-pokeball fs-5 me-3"></i>Catch</button>
             </div>
           </div>
         </div>
