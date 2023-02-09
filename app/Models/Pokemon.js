@@ -4,10 +4,15 @@ export class Pokemon{
   constructor(data){
     this.id = data.id
     this.name = data.name
-    this.img = data.img
+    this.img = data.sprites.other['official-artwork'].front_default || data.sprites.front_default
     this.weight = data.weight
     this.height = data.height
-    this.types = data.types
+    this.type1 = data.types[0].type.name
+    if(data.types[1]){
+      this.type2 = data.types[1].type.name
+    }else{
+      this.type2 = ''
+    }
     this.user = 'what do I put here lol'
   }
 
@@ -15,10 +20,9 @@ export class Pokemon{
 
   get activePokemonTemplate(){
     return `
-    <div class="col-7">
     <div class="row px-5 hundo">
       <div class="col-11 offset-1 d-flex justify-content-center mt-4 rounded elevation-1 pokeCardOuter">
-        <div class="text-center py-1 pokeCardInner">
+        <div class="py-1 pokeCardInner d-flex justify-content-center align-items-center">
           <span id="pokeName" class="fs-3 fw-bold">${this.name}</span>
         </div>
       </div>
@@ -30,29 +34,27 @@ export class Pokemon{
           <div class="row">
             <div class="col-6 d-flex flex-column">
               <span class="mt-3 fs-5">Height: ${this.height}</span>
-              <span class="mt-3 fs-5">Types: Fairy & Psychic</span>
+              <span id="types" class="mt-3 fs-5">Types: ${this.type1} ${this.type2} </span>
             </div>
             <div class="col-6 d-flex flex-column">
-              <span class="mt-3 fs-5">Weight: </span>
+              <span class="mt-3 fs-5">Weight: ${this.weight}</span>
               <button onclick="app.sandboxController.catchPokemon('${this.id}')" class="mt-5 myPokeBtn rounded mb-2 py-2 fs-5"><i class="mdi mdi-pokeball fs-5 me-3"></i>Catch</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
     `
   }
 
   static pokemonListTemplate(pokemon){
     return `
-    <span class="fs-3 py-1 px-1 selectable"><i class="mdi mdi-pokeball fs-3 fw-bold me-3" onclick="app.pokemonController.getPokemonByName('${pokemon.name}')"></i>${pokemon.name}</span>
+    <span class="fs-3 py-1 px-1 selectable" onclick="app.pokemonController.getPokemonByName('${pokemon.name}')"><i class="mdi mdi-pokeball fs-3 fw-bold me-3"></i>${pokemon.name}</span>
     `
   }
 
   static BlankTemplate(){
     return `
-  <div class="col-7">
     <div class="row px-5 hundo">
       <div class="col-11 offset-1 d-flex justify-content-center mt-4 rounded elevation-1 pokeCardOuter">
         <div class="text-center py-1 pokeCardInner">
@@ -76,7 +78,6 @@ export class Pokemon{
         </div>
       </div>
     </div>
-  </div>
     `
   }
 }

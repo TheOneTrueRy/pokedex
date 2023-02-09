@@ -78,7 +78,7 @@ main{
 }
 
 #infoCard{
-  height: 25vh
+  height: 25vh;
 }
 
 #pokemonListBox{
@@ -91,10 +91,14 @@ main{
   font-family: "Pokemon Gb";
 }
 
-/* #pokemonListBox::-webkit-scrollbar{
-  display: none;
-} */
-
 #pokemonList span{
+  text-transform: capitalize;
+}
+
+#pokeName{
+  text-transform: capitalize;
+}
+
+#types{
   text-transform: capitalize;
 }
