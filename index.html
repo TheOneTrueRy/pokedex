@@ -19,7 +19,7 @@
   <header>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-4 offset-4 d-flex justify-content-center align-items-center py-1">
+        <div class="col-4 offset-4 d-flex justify-content-center align-items-center">
           <img src="assets/img/POKEMON.png" height="45" alt=""
           loading="lazy">
           <span class="ms-2 fs-1 pt-2 pokemon">Pokedex</span>
@@ -33,36 +33,40 @@
 
   <main class="d-flex">
     <div class="container-fluid hundo">
-      <div class="row">
+      <div id="activePokemon" class="row hundo">
         <div class="col-7">
           <div class="row px-5 hundo">
             <div class="col-11 offset-1 d-flex justify-content-center mt-4 rounded elevation-1 pokeCardOuter">
               <div class="text-center py-1 pokeCardInner">
-                <span id="pokeName" class="fs-3 fw-bold">Pikachu</span>
+                <span id="pokeName" class="fs-3 fw-bold">Select a Pokemon!</span>
               </div>
             </div>
-            <div class="col-11 offset-1 d-flex justify-content-center align-items-center py-4">
-              <img id="sprite" src="//via.placeholder.com/400x300" alt="">
+            <div id="sprite" class="col-11 offset-1 d-flex justify-content-center align-items-center py-4">
+              <img class="img-fluid" src="" alt="">
             </div>
-            <div class="col-11 offset-1 pokeCardOuter d-flex justify-content-center">
+            <div id="infoCard" class="col-11 offset-1 pokeCardOuter d-flex justify-content-center">
               <div class="px-3 pokeCardInner">
                 <div class="row">
                   <div class="col-6 d-flex flex-column">
-                    <span class="mt-3">Height: </span>
-                    <span class="mt-3">Types: Fairy & Psychic</span>
+                    <span class="mt-4">Height: </span>
+                    <span class="mt-5">Types:</span>
                   </div>
                   <div class="col-6 d-flex flex-column">
-                    <span class="mt-3">Weight: </span>
-                    <button onclick="app.sandboxController.catchPokemon('${this.id}')" class="mt-5 myPokeBtn rounded mb-2 py-2 fs-5"><i class="mdi mdi-pokeball fs-5 me-3"></i>Catch</button>
+                    <span class="mt-4">Weight: </span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-5">
-          <div class="row">
-
+        <div class="col-5 hundo">
+          <div class="row py-4 px-5 hundo">
+            <div class="col-12 hundo">
+              <div id="pokemonListBox" class="row hundo">
+                <div id="pokemonList" class="col-12 pt-3 px-4 d-flex flex-column">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
