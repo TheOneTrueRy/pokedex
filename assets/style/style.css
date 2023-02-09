@@ -29,6 +29,11 @@ header{
   color: #E93031;
   font-family: "Pokemon Gb";
   background-color: white;
+  transition: 0.4s;
+}
+
+.myPokeBtn:hover{
+  transform: scale(1.05);
 }
 
 .nomb{
