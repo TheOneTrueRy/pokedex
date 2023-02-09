@@ -10,16 +10,19 @@
   src: url(PokemonGb-RAeo.ttf);
 }
 
-
+html {
+  overflow: hidden;
+  height: 100%;
+}
 
 header{
   background-color: #E93031;
   border-bottom: 4px solid black;
-  height: 8vh;
+  height: 10vh;
 }
 
 main{
-  height: 92vh;
+  height: 89vh;
   background-image: url('https://vignette.wikia.nocookie.net/sonicpokemon/images/8/8d/Kanto_Route_1_PO.png/revision/latest?cb=20140108170139');
   background-size: cover;
   background-position: bottom;
