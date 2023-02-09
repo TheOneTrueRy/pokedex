@@ -29,11 +29,11 @@ export class Pokemon{
         <div class="px-3 pokeCardInner">
           <div class="row">
             <div class="col-6 d-flex flex-column">
-              <span class="mt-3">Height: ${this.height}</span>
-              <span class="mt-3">Types: Fairy & Psychic</span>
+              <span class="mt-3 fs-5">Height: ${this.height}</span>
+              <span class="mt-3 fs-5">Types: Fairy & Psychic</span>
             </div>
             <div class="col-6 d-flex flex-column">
-              <span class="mt-3">Weight: </span>
+              <span class="mt-3 fs-5">Weight: </span>
               <button onclick="app.sandboxController.catchPokemon('${this.id}')" class="mt-5 myPokeBtn rounded mb-2 py-2 fs-5"><i class="mdi mdi-pokeball fs-5 me-3"></i>Catch</button>
             </div>
           </div>

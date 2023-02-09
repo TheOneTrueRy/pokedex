@@ -20,6 +20,9 @@ header{
 
 main{
   height: 92vh;
+  background-image: url('https://vignette.wikia.nocookie.net/sonicpokemon/images/8/8d/Kanto_Route_1_PO.png/revision/latest?cb=20140108170139');
+  background-size: cover;
+  background-position: bottom;
 }
 
 /* SECTION Classes */
