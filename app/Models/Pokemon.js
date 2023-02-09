@@ -5,15 +5,10 @@ export class Pokemon{
     debugger
     this.id = data.id
     this.name = data.name
-    this.img = data.sprites.other['official-artwork'].front_default || data.sprites.front_default
+    this.img = data.img || data.sprites.other['official-artwork'].front_default
     this.weight = data.weight
     this.height = data.height
-    this.type1 = data.types[0].type.name
-    if(data.types[1]){
-      this.type2 = data.types[1].type.name
-    }else{
-      this.type2 = ''
-    }
+    this.types = data.types
     this.user = 'what do I put here lol'
   }
 
@@ -35,7 +30,7 @@ export class Pokemon{
           <div class="row">
             <div class="col-6 d-flex flex-column">
               <span class="mt-3 fs-5">Height: ${this.height}</span>
-              <span id="types" class="mt-3 fs-5">Types: ${this.type1} ${this.type2} </span>
+              <span id="types" class="mt-3 fs-5">Types: ${this.types[0].type.name} ${this.types[1] ? this.types[1].type.name : ''}</span>
             </div>
             <div class="col-6 d-flex flex-column">
               <span class="mt-3 fs-5">Weight: ${this.weight}</span>

@@ -105,3 +105,8 @@ main{
 #types{
   text-transform: capitalize;
 }
+
+#myPokemonList span{
+  text-transform: capitalize;
+  font-family: "Pokemon Gb";
+}
