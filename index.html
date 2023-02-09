@@ -9,7 +9,7 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
     integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Your Pokedex!</title>
@@ -48,12 +48,12 @@
               <div class="px-3 pokeCardInner">
                 <div class="row">
                   <div class="col-6 d-flex flex-column">
-                    <span id="pokeHeight" class="mt-3">Height: </span>
-                    <span id="pokeTypes" class="mt-3">Types: Fairy & Psychic</span>
+                    <span class="mt-3">Height: </span>
+                    <span class="mt-3">Types: Fairy & Psychic</span>
                   </div>
                   <div class="col-6 d-flex flex-column">
-                    <span id="pokeWeight" class="mt-3">Weight: </span>
-                    <button class="mt-5 myPokeBtn rounded mb-2 py-2 fs-5"><i class="mdi mdi-pokeball fs-5 me-3"></i>Catch</button>
+                    <span class="mt-3">Weight: </span>
+                    <button onclick="app.sandboxController.catchPokemon('${this.id}')" class="mt-5 myPokeBtn rounded mb-2 py-2 fs-5"><i class="mdi mdi-pokeball fs-5 me-3"></i>Catch</button>
                   </div>
                 </div>
               </div>
